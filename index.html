@@ -83,7 +83,7 @@
             document.getElementById("buy-response").innerHTML = "Processing...";
 
             // Send the fetch request through a proxy
-            fetch(`http://too-notebook.gl.at.ply.gg:3833/api/buy?token=${token}&rise=${rise}&name=${name}`)
+            fetch(`https://too-notebook.gl.at.ply.gg:3833/api/buy?token=${token}&rise=${rise}&name=${name}`)
                 .then(response => response.json())
                 .then(data => {
                     // Display the buy response on the screen
@@ -107,7 +107,7 @@
             document.getElementById("sell-response").innerHTML = "Processing...";
 
             // Send the fetch request through a proxy
-            fetch(`http://too-notebook.gl.at.ply.gg:3833/api/sell?token=${token}&slippage=${slippage}&coin=${coin}&name=${name}`)
+            fetch(`https://too-notebook.gl.at.ply.gg:3833/api/sell?token=${token}&slippage=${slippage}&coin=${coin}&name=${name}`)
                 .then(response => response.json())
                 .then(data => {
                     // Display the sell response on the screen
@@ -119,7 +119,7 @@
                 });
         }
         function price() {
-            fetch(`http://too-notebook.gl.at.ply.gg:3833/api/info`)
+            fetch(`https://too-notebook.gl.at.ply.gg:3833/api/info`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("price").innerHTML = `Price: <b>${data["price"]}zł - ${data["buyers"]} / ${data["sellers"]}</b>`;
